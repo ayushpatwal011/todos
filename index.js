@@ -3,8 +3,8 @@ import mongoose from "mongoose"
 import cors from "cors"
 import dotenv from "dotenv"
 
-import todoRoute from "../backend/routes/todo.route.js"
-import userRoute from "../backend/routes/user.route.js"
+import todoRoute from "./routes/todo.route.js"
+import userRoute from "./routes/user.route.js"
 import cookieParser from "cookie-parser"
 
 const app = express()
