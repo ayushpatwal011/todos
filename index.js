@@ -18,7 +18,14 @@ app.use(express.json())
 app.use(cookieParser())
 
 app.use(
-  cors()
+  cors(
+    {
+      origin: process.env.FRONTEND_URL,
+      credentials: true,
+      allowedHeaders: ["Origin", "X-Requested-With", "Content-Type", "Authorization"],
+      methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
+    }
+  )
 )
 
 // Database connection
